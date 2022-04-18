@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +23,8 @@ Route::get('/', function () {
 });
 */
 
-/*
-------------------------------------------------
-*/
-
+/*---------------------------------------------------------*/
+/*Praktikum 1   
 route:: get('/',function() {
     return 'selamat datang';
 });
@@ -35,3 +38,15 @@ route:: get('/about', function(){
 route:: get('/articels/{id}',function($id){
     return 'Ini adalah halaman artikel dengan ID: '.$id;
 });
+*/
+/*
+Route::get('/hello', [WelcomeController::class,'hello']);
+*/
+
+/*---------------------------------------------------------*/
+/* praktikum 2
+Route::get('/index', HomeController::class,); 
+Route::get('/about', AboutController::class,);
+Route::get('/articles/{id}', ArticleController::class,);  
+*/
+/* Praktikum 3
